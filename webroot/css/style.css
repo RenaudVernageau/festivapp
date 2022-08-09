@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* label */
+
+.input--text{
+    border: none;
+    border-bottom: 0.1rem solid grey;
+    box-shadow:none;
+    box-sizing:inherit;
+    max-width: 200px;
+}
+
+/*photo de profil*/
+
+.profile__photo
+{
+    width: 25px;
+    border-radius: 50%;
+}
+
+/* page d'accueil */
+
+.menu-fa{
+    width: 120px;
+}
+
+.top-nav-links{
+    display: flex;
+}
+
+.button-link{
+    background-color: #d33c43;
+    flex-direction: row;
+    margin: 0.5em;
+    padding: 8px;
+    border-radius: 12px;
+    border: 2.5px solid white;
+    box-shadow: 5px 5px 15px -7px rgba(0,0,0,0.60);
+}
+
+.top-nav-links a{
+    color: white;
+    font-weight: lighter;
+}
+
+
+/* page post */
+
+.container__post{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.button {
+  position: relative;
+  display: table;
+  padding: 0.75em 2.1em;
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.button:hover {
+  background: #2f2f2f;
+}
+
+.article {
+  margin: 14px;
+  padding: 10px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px -7px rgba(0,0,0,0.60);
+  width: 100%;
+  background: #fff;
+}
+.article .article__img img {
+  width: 100%;
+  height: auto;
+}
+.article .article__content {
+  margin: 0;
+  padding: 0.5em 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.article .article__content .article__description {
+  margin: 0;
+}
+.article .article__content .article__location {
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+  font-weight: lighter;
+}
+.article .article__content .article__date {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+
+.text-grand-hotel{
+    font-family: 'Grand Hotel';
+    font-size: 100px;
+    color: #000;
+}
+
+.btn-add__post a {
+    color: #606c76;
+}
+
+.btn-add__post{
+    justify-content: center;
+    align-items: center;
+    margin:2px;
+    font-size:24px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    border: 2.5px solid white;
+    box-shadow: 5px 5px 15px -7px rgba(0,0,0,0.60);
+}
+
+/* page add post */
+
+.container-form{
+    display: flex;
+    justify-content: center;
+}
+
+.form-img{
+    margin-bottom: 3rem;
+}
+
+.form-add__post{
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px -7px rgba(0,0,0,0.60);
+    width: 80%;
+    background: #fff;
+}
+
+.form__info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
+
+/* page user */
+
+.user-card{
+    border: 1px dashed magenta;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+}
+
+.user-imgBox
+{
+    width: 150px;
+    height: 150px;
+}
+
+.user-username-head
+{
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+.user-name-head
+{
+    padding-bottom: 1.2em;
+}
+
+.user-desc
+{
+    padding-bottom: 1.2em;
+}
+
+.user-musicstyles
+{
+    text-transform: uppercase;
+}
