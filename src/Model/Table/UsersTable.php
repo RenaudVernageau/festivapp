@@ -25,7 +25,12 @@ class UsersTable extends Table {
 
         $validator
             ->notEmptyString('email')
-            ->maxLength('email',80);
+            ->maxLength('email',80)
+            ->requirePresence('email')
+            ->add('email', 'validFormat', [
+                'rule' => 'email',
+                'message' => 'L\'email doit être valide'
+            ]);
 
         $validator
             ->scalar('password')

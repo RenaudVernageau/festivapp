@@ -6,6 +6,7 @@ $cakeDescription = 'Festiv\'App';
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://cdn.tailwindcss.com"></script>
     <title>
         <?= $cakeDescription ?>
     </title>
@@ -28,19 +29,15 @@ $cakeDescription = 'Festiv\'App';
         <div class="top-nav-links">
             <?php
             if($this->request->getAttribute('identity') == null) : ?>
-            <div class="button-link">
-                <?= $this->Html->link('Créer un compte',['controller' => 'Users','action'=>'signup']) ?>
-            </div>
-            <div class="button-link">
-                <?= $this->Html->link('Se connecter',['controller' => 'Users','action'=>'login']) ?>
-            </div>
+
+                <?= $this->Html->link('Créer un compte',['controller' => 'Users','action'=>'signup','class'=>'link--header']) ?>
+
+                <?= $this->Html->link('Se connecter',['controller' => 'Users','action'=>'login','class'=>'link--header']) ?>
             <?php else : ?>
-            <div class="button-link">
-                <?= $this->Html->link('Mon profil',['controller' => 'Users','action'=>'view',$this->request->getAttribute('identity')->id]) ?>
-            </div>
-            <div class="button-link">
-                <?= $this->Html->link('Se déconnecter',['controller' => 'Users','action'=>'logout']) ?>
-            </div>
+
+                <?= $this->Html->link('Mon profil',['controller' => 'Users','action'=>'view',$this->request->getAttribute('identity')->id,'class'=>'link--header']) ?>
+
+                <?= $this->Html->link('Se déconnecter',['controller' => 'Users','action'=>'logout','class'=>'link--header']) ?>
             <?php endif; ?>
         </div>
         </div>

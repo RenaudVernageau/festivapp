@@ -21,14 +21,6 @@ a {
     transition:all 0.2s linear;
 }
 
-a:hover,
-a:focus,
-a:active  {
-    color:#2a6496;
-    -webkit-transition:all 0.2s easeout;
-    transition:all 0.2s ease-out;
-}
-
 .side-nav a,
 th a,
 .actions a {

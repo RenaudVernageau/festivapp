@@ -1,26 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
-/* label */
+/* Website*/
 
-.input--text{
-    border: none;
-    border-bottom: 0.1rem solid grey;
-    box-shadow:none;
-    box-sizing:inherit;
-    max-width: 200px;
-}
-
-/*photo de profil*/
-
-.profile__photo
+.mybutton
 {
-    width: 25px;
-    border-radius: 50%;
+    border: 1px solid #d1d1d1;
+    padding: 8px 12px;
 }
 
-/* page d'accueil */
-
-.menu-fa{
+.menu-fa
+{
     width: 120px;
 }
 
@@ -28,34 +17,68 @@
     display: flex;
 }
 
-.button-link{
-    background-color: #d33c43;
-    flex-direction: row;
-    margin: 0.5em;
-    padding: 8px;
-    border-radius: 12px;
-    border: 2.5px solid white;
-    box-shadow: 5px 5px 15px -7px rgba(0,0,0,0.60);
+.top-nav-links a
+{
+    color: #606c76;
+    font-weight: lighter;
 }
 
-.top-nav-links a{
-    color: white;
-    font-weight: lighter;
+.input--text
+{
+    background-color: transparent;
+    border: 0.1rem solid #d1d1d1;
+    border-radius: .4rem;
+    box-shadow: none;
+    box-sizing: inherit;
+    height: 3.8rem;
+    padding: .6rem 1.0rem;
+    width: 100%;
+}
+
+@media screen and (max-width:550px)
+{
+    .menu-fa
+    {
+        width: 80px;
+    }
+    .top-nav-links a
+    {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:405px)
+{
+    .menu-fa
+    {
+        width: 60px;
+    }
+}
+
+@media screen and (max-width:300px)
+{
+    .top-nav-links{
+        display: flex;
+        flex-direction: column;
+    }
+    a .top-nav-links{
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width:240px)
+{
+    .top-nav-links a
+    {
+        font-size: 8px;
+    }
 }
 
 
 /* page post */
 
-.container__post{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    align-items: center;
-}
-
-.button {
+.button
+{
   position: relative;
   display: table;
   padding: 0.75em 2.1em;
@@ -66,11 +89,14 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-.button:hover {
+
+.button:hover
+{
   background: #2f2f2f;
 }
 
-.article {
+.article
+{
   margin: 14px;
   padding: 10px;
   border: 1px solid grey;
@@ -79,45 +105,68 @@
   width: 100%;
   background: #fff;
 }
-.article .article__img img {
+
+.article__profile
+{
+    display: inline;
+}
+
+.article__profile a
+{
+    vertical-align: middle;
+}
+
+.article__img img
+{
   width: 100%;
   height: auto;
 }
-.article .article__content {
+
+.article__content
+{
   margin: 0;
   padding: 0.5em 0.5em 0;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-.article .article__content .article__description {
+
+.article__description
+{
   margin: 0;
 }
-.article .article__content .article__location {
+
+ .article__location
+ {
   margin: 0;
   padding: 0;
   font-style: italic;
-  font-weight: lighter;
+  font-weight: 200;
 }
-.article .article__content .article__date {
+
+.article__date
+{
   margin: 0;
   font-size: 0.8em;
   font-weight: lighter;
 }
 
-.text-grand-hotel{
+.text-grand-hotel
+{
     font-family: 'Grand Hotel';
     font-size: 100px;
     color: #000;
 }
 
-.btn-add__post a {
+.btn-add__post a
+{
     color: #606c76;
+    position: relative;
+    transform: translateX(-50%);
 }
 
-.btn-add__post{
-    justify-content: center;
-    align-items: center;
+.btn-add__post
+{
     margin:2px;
     font-size:24px;
     cursor:pointer;
@@ -130,16 +179,19 @@
 
 /* page add post */
 
-.container-form{
+.container-form
+{
     display: flex;
     justify-content: center;
 }
 
-.form-img{
+.form-img
+{
     margin-bottom: 3rem;
 }
 
-.form-add__post{
+.form-add__post
+{
     padding: 20px;
     border: 1px solid grey;
     border-radius: 8px;
@@ -148,49 +200,22 @@
     background: #fff;
 }
 
-.form__info{
+.form__info
+{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
 }
 
-
-
 /* page user */
 
-.user-card{
-    border: 1px dashed magenta;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px;
-}
 
-.user-imgBox
-{
-    width: 150px;
-    height: 150px;
-}
 
-.user-username-head
+@media screen and (max-width:550px)
 {
-    font-weight: bold;
-    padding-bottom: 0.5em;
-}
-
-.user-name-head
-{
-    padding-bottom: 1.2em;
-}
-
-.user-desc
-{
-    padding-bottom: 1.2em;
-}
-
-.user-musicstyles
-{
-    text-transform: uppercase;
+    .profile--photo
+    {
+        width: 30px;
+    }
 }

@@ -1,12 +1,18 @@
-<div class="wrapper">
-    <div class="article">
-        <div class="article__img">
-            <img src="<?=$post->img ?>" alt="" width="700px">
+<div class="flex justify-center items-center ">
+        <div class="py-2 px-4 rounded-2xl shadow-xl z-20 bg-white">
+            <figure><?= $this->Html->image($post->img) ?></figure>
+            <div class="space-y-4">
+                <p class="text-black font-semibold mb-2"><?= $post->location ?></p>
+                <p class="text-black mb-4"><?= $post->description ?></p>
+            </div>
+        <hr class="mt-8 text-center">
+        <div class="my-6 flex justify-center ">
+            <p><?= $this->Html->link('Éditer', ['action' => 'edit', $post->id]) ?></p>
+            <p><?= $this->Form->postLink('Supprimer', ['action' => 'delete', $post->id],['confirm' => 'Êtes-vous sûr ? Cette action est irréversible.']) ?></p>
         </div>
-        <div class="article__content">
-            <div class="article__location"><?= $post->location ?></div>
-            <div class="article__description"><?= $post->description ?></div>
-            <div class="article__date"><?= $post->created_at->format(DATE_RFC850) ?></div>
-        </div>
-    </div>
 </div>
+
+
+
+
+

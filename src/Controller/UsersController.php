@@ -15,19 +15,13 @@ class UsersController extends AppController
 
     public function view($id = null)
     {
-        if(empty($id))
-        return $this->redirect([
-            'controller' => 'Posts',
-            'action' => 'index'
-        ]);
-
-        $user = $this->Users->find()
+        $user = $this->Users
+            ->find()
             ->where(['Users.id'=>$id]);
 
         $this->set(['user'=>$user]);
 
         if($user->isEmpty()) :
-
             $this->Flash->error('Utilisateur introuvable');
             return $this->redirect([
                 'controller' => 'Posts',
@@ -119,7 +113,9 @@ class UsersController extends AppController
     {
         if(empty($id))
             return $this->redirect(['action'=>'index']);
-            $user = $this->Users->find()->where(['id'=>$id]);
+
+        $user = $this->Users->find()->where(['id'=>$id]);
+
         if($user->isEmpty()) :
             $this->Flash->error('Utilisateur introuvable');
             return $this->redirect(['action'=>'index']);
@@ -151,5 +147,37 @@ class UsersController extends AppController
             $this->Flash->error('Erreur lors de la modification du profil');
         }
         $this->set(compact('user'));
+    }
+
+    public function delete($id = null)
+    {
+        if(empty($id))
+            return $this->redirect(['action'=>'index']);
+            $user = $this->Users->find()->where(['id'=>$id]);
+        if($user->isEmpty()) :
+            $this->Flash->error('Utilisateur introuvable');
+            return $this->redirect(['action'=>'index']);
+        endif;
+            $user = $user->first();
+        //si on est en method POST (formulaire soumis) ou delete
+        if ($this->request->is(['post', 'delete'])) {
+            if ($this->Users->delete($user)) {
+
+            $log = $this->Authentication->getResult();
+
+                if($log->isValid()){
+
+                    $this->Authentication->logout();
+                }
+
+                $this->Flash->success('Utilisateur supprimée');
+                return $this->redirect([
+                    'controller' => 'Users',
+                    'action' => 'signup'
+                ]);
+            }
+
+            $this->Flash->error('Erreur lors de la suppression de l\'utilisateur');
+        }
     }
 }

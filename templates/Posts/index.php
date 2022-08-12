@@ -1,23 +1,34 @@
-<div class="container__post">
-    <div class="btn-add__post"><?= $this->Html->link('+', ['action'=>'add']) ?></div>
+<header class="flex justify-center">
+    <button class="py-2 px-4 rounded-full bg-white shadow-xl mb-10">
+        <?= $this->Html->link('+', ['action'=>'add','class'=>'mybutton']) ?>
+    </button>
+</header>
 
-    <?php foreach($posts as $post): ?>
-            <div class="article">
-                <div class="article__profile">
-                    <?= $this->Html->image($post->user->profilephoto,['class' => 'profile__photo']) ?>
-                    <?= $post->user->username ?>
+<?php foreach($posts as $post): ?>
+
+    <section class="flex justify-center mb-20">
+        <div class="w-3/4 rounded-2xl shadow-xl z-20 bg-white ">
+            <div class="px-4 py-3">
+                <div class="flex items-center font-bold mb-4">
+                    <?= $this->Html->image($post->user->profilephoto,['class' => 'w-20 h-20 rounded-full mr-6']) ?>
+                    <p class="text-black"><?= $post->user->username ?></p>
                 </div>
-                <div class="article__img">
-                    <?= $this->Html->image($post->img) ?>
+                <div class="mb-4">
+                <?= $this->Html->link($this->Html->image($post->img),
+                            ['action' => 'view', $post->id],
+                            ['escape' => false ],
+                            ['class' => 'w-full']);?>
                 </div>
-                <div class="article__content">
-                    <div class="article__location"><?= $post->location ?></div>
-                    <div class="article__description"><?= $post->description ?></div>
-                    <div class="article__date"><?= $post->created_at ?></div>
+                <div class="">
+                        <p class="text-black font-semibold mb-2"><?= $post->location ?></p>
+                        <p class="text-black mb-4"><?= $post->description ?></p>
+                        <p><?= $post->created->format(DATE_RFC850) ?></p>
                 </div>
             </div>
-    <?php endforeach ?>
-</div>
+        </div>
+
+    </section>
+<?php endforeach ?>
 
 
 
