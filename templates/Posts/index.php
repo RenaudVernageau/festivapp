@@ -10,7 +10,11 @@
         <div class="w-3/4 rounded-2xl shadow-xl z-20 bg-white ">
             <div class="px-4 py-3">
                 <div class="flex items-center font-bold mb-4">
-                    <?= $this->Html->image($post->user->profilphoto,['class' => 'w-20 h-20 rounded-full mr-6']) ?>
+                    <?php if($post->user->profilphoto == null){  ?>
+                        <?= $this->Html->image('defaultprofil.png',['class' => 'w-20 h-20 rounded-full mr-6']) ?>
+        <?php            }else{ ?>
+                        <?= $this->Html->image($post->user->profilphoto,['class' => 'w-20 h-20 rounded-full mr-6']) ?>
+        <?php            }   ?>
                     <p class="text-black"><?= $post->user->username ?></p>
                 </div>
                 <div class="mb-4">

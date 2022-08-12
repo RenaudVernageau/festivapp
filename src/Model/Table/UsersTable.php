@@ -41,29 +41,29 @@ class UsersTable extends Table {
         $validator
             ->sameAs('retype_password','password','Les 2 champs ne correspondent pas');
 
-            // $validator
-            // ->uploadedFile('profilphoto', [
-            //     'types' => ['image/png'], // only PNG image files
-            //     'minSize' => 1024, // Min 1 KB
-            //     'maxSize' => 1024 * 1024 // Max 1 MB
-            // ])
-            // ->add('profilphoto', 'minSize', [
-            //     'rule' => ['imageSize', [
-            //         // Min 10x10 pixel
-            //         'width' => [Validation::COMPARE_GREATER_OR_EQUAL, 10],
-            //         'height' => [Validation::COMPARE_GREATER_OR_EQUAL, 10],
-            //     ]]
-            // ])
-            // ->add('profilphoto', 'maxSize', [
-            //     'rule' => ['imageSize', [
-            //         // Max 100x100 pixel
-            //         'width' => [Validation::COMPARE_LESS_OR_EQUAL, 100],
-            //         'height' => [Validation::COMPARE_LESS_OR_EQUAL, 100],
-            //     ]]
-            // ])
-            // ->add('profilphoto', 'extension', [
-            //     'rule' => ['extension', ['png']] // .png file extension only
-            // ]);
+        $validator
+            ->uploadedFile('profilphoto', [
+                'types' => ['image/png'], // only PNG image files
+                'minSize' => 1024, // Min 1 KB
+                'maxSize' => 1024 * 1024 // Max 1 MB
+            ])
+            ->add('profilphoto', 'minSize', [
+                'rule' => ['imageSize', [
+                     // Min 100x100 pixel
+                    'width' => [Validation::COMPARE_GREATER_OR_EQUAL, 100],
+                    'height' => [Validation::COMPARE_GREATER_OR_EQUAL, 100],
+                ]]
+            ])
+            ->add('profilphoto', 'maxSize', [
+                'rule' => ['imageSize', [
+                    // Max 800x800 pixel
+                    'width' => [Validation::COMPARE_LESS_OR_EQUAL, 800],
+                    'height' => [Validation::COMPARE_LESS_OR_EQUAL, 800],
+                ]]
+            ])
+            ->add('profilphoto', 'extension', [
+                'rule' => ['extension', ['png','jpg','jpeg']]
+            ]);
 
         return $validator;
     }

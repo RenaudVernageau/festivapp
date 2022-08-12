@@ -18,9 +18,9 @@
             <p><?= $user->musicstyles ?></p>
         </div>
         <hr class="mt-8 text-center">
-        <div class="my-6 flex justify-center ">
-            <p><?= $this->Html->link('Éditer', ['action' => 'edit', $user->id,'class'=>'']) ?></p>
-            <p><?= $this->Form->postLink('Supprimer', ['action' => 'delete', $user->id,'class'=>''],['confirm' => 'Êtes-vous sûr ? Cette action est irréversible.']) ?></p>
+        <div class="my-6 flex justify-center w-full">
+            <p><?= $this->Html->link('Éditer', ['action' => 'edit', $user->id,'class'=>'mx-auto w-1/2']) ?></p>
+            <p><?= $this->Form->postLink('Supprimer', ['action' => 'delete', $user->id,'class'=>'mx-auto w-1/2'],['confirm' => 'Êtes-vous sûr ? Cette action est irréversible.']) ?></p>
         </div>
     </div>
 </div>
