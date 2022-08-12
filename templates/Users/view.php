@@ -2,7 +2,7 @@
 	<div class="w-3/4 rounded-2xl shadow-xl z-20 bg-white ">
         <div class="w-32 mx-auto rounded-full -mt-20 border-4 border-white">
             <figure class="items-center">
-                <?= $this->Html->image($user->profilephoto,['class'=>'rounded-full profile--photo']) ?>
+                <?= $this->Html->image($user->profilphotopath,['class'=>'rounded-full profil--photo']) ?>
             </figure>
         </div>
         <div class="space-y4 mb-8">

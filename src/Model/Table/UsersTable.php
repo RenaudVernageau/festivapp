@@ -42,26 +42,26 @@ class UsersTable extends Table {
             ->sameAs('retype_password','password','Les 2 champs ne correspondent pas');
 
             // $validator
-            // ->uploadedFile('profilephoto', [
+            // ->uploadedFile('profilphoto', [
             //     'types' => ['image/png'], // only PNG image files
             //     'minSize' => 1024, // Min 1 KB
             //     'maxSize' => 1024 * 1024 // Max 1 MB
             // ])
-            // ->add('profilephoto', 'minSize', [
+            // ->add('profilphoto', 'minSize', [
             //     'rule' => ['imageSize', [
             //         // Min 10x10 pixel
             //         'width' => [Validation::COMPARE_GREATER_OR_EQUAL, 10],
             //         'height' => [Validation::COMPARE_GREATER_OR_EQUAL, 10],
             //     ]]
             // ])
-            // ->add('profilephoto', 'maxSize', [
+            // ->add('profilphoto', 'maxSize', [
             //     'rule' => ['imageSize', [
             //         // Max 100x100 pixel
             //         'width' => [Validation::COMPARE_LESS_OR_EQUAL, 100],
             //         'height' => [Validation::COMPARE_LESS_OR_EQUAL, 100],
             //     ]]
             // ])
-            // ->add('profilephoto', 'extension', [
+            // ->add('profilphoto', 'extension', [
             //     'rule' => ['extension', ['png']] // .png file extension only
             // ]);
 

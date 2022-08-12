@@ -49,7 +49,7 @@ class UsersController extends AppController
         }
         // display error if user submitted and authentication failed
         if ($this->request->is('post') && !$result->isValid()) {
-            $this->Flash->error(__('Connection impossible'));
+            $this->Flash->error(__('Identifiants introuvables'));
         }
     }
 
@@ -90,7 +90,7 @@ class UsersController extends AppController
 
                 $image->moveTo(WWW_ROOT.'img/'.$name);
 
-                $user->profilephoto = $name;
+                $user->profilphoto = $name;
 
 
             //si on peut sauvegarder
@@ -136,7 +136,7 @@ class UsersController extends AppController
 
             $image->moveTo(WWW_ROOT.'img/'.$name);
 
-            $user->profilephoto = $name;
+            $user->profilphoto = $name;
 
 
 

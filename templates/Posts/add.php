@@ -14,9 +14,6 @@
             <div class="text-center mt-6">
                     <?= $this->form->button('Publier',['class'=>'mybutton']); ?>
             </div>
-    <?= $this->form->end(); ?>
-
-
-
-
-
+        </div>
+    </div>
+<?= $this->form->end(); ?>

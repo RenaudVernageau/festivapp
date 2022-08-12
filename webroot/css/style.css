@@ -106,12 +106,12 @@
   background: #fff;
 }
 
-.article__profile
+.article__profil
 {
     display: inline;
 }
 
-.article__profile a
+.article__profil a
 {
     vertical-align: middle;
 }
@@ -214,7 +214,7 @@
 
 @media screen and (max-width:550px)
 {
-    .profile--photo
+    .profil--photo
     {
         width: 30px;
     }

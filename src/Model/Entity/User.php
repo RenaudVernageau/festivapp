@@ -15,4 +15,10 @@ class User extends Entity{
         if(strlen($p) > 0)
             return (new DefaultPasswordHasher())->hash($p);
     }
+    public function _getprofilphotopath(){
+        if(empty($this->profilphoto))
+        return "defaultprofil.png";
+
+        else return $this->profilphoto ;
+    }
 }
